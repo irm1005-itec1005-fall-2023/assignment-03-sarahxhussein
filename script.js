@@ -58,10 +58,10 @@ function addToDoItem(text) {
     text: text,
     completed: false
   };
+
  count= count +1;
   todoItems.push(todoItem);
   console.log("Added:", todoItem);
-
 
 }
 
@@ -73,6 +73,7 @@ addToDoItem("milk");
 // Loop through the array of todos, and when you find the todo item with the id
 // that matches the id passed to the function, remove it from the array
 // the function does not need to return anything
+
 function removeToDoItem(todoId) {
   if (typeof todoId !== "number") {
     console.log("Please enter a number");
@@ -93,13 +94,13 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 
 function markToDoItemAsCompleted(todoId) {
-  for ( let i 0; i < todoItems.length; i++ ) {
-    if ( todoItems[i].id === todoID ) {
+  for (let i = 0; i < todoItems.length; i++) {
+    if (todoItems[i].id === todoID) {
       todoItems[i].completed = true;
       break;
     }
-
   }
+  
 }
 
 // Function to delete a task from the array
