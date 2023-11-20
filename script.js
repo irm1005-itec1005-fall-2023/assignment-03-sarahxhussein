@@ -45,15 +45,27 @@
 
 // Initialise an empty array with the variable name todoItems
 
+const todoItems = []
+
 // Function to add a todo to the list
 // It should accept a string as a parameter (text of the todo item)
 // and it should add a new todo item to the todoItems array
 // the function does not need to return anything
 function addToDoItem(text) {
-  // Implement the logic to add a task here
+  const item = {
+    id: 0,
+    text: "This is a todo item",
+    completed: false,
+  };
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+ count= count + 1;
+  todoItems.push(todoItem);
+  console.log("Added:", todoItem);
+
 }
+
+addToDoItem("tea");
+addToDoItem("milk");
 
 // Function to remove a todo to the list
 // It should accept a number as a parameter (id of the todo item)
@@ -72,9 +84,13 @@ function removeToDoItem(todoId) {
 // that matches the id passed to the function, set its completed property to true
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
-  // Implement the logic to mark a task as completed here
+  for ( let i 0; i < todoItems.length; i++ ) {
+    if ( todoItems[i].id === todoID ) {
+      todoItems[i].completed = true;
+      break;
+    }
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  }
 }
 
 // Function to delete a task from the array
@@ -83,10 +99,19 @@ function markToDoItemAsCompleted(todoId) {
 // that matches the id passed to the function, remove it from the array
 // the function does not need to return anything, though you can return
 // true or false depending on whether the item was successfully deleted
-function deleteToDoItem(todoId) {
-  // Implement the logic to remove a task here
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+
+function deleteToDoItem(todoId) {
+  if ( typeof todoId !== "number") {
+    console.log("please enter a number");
+
+
+
+    return false;
+  }
+  deleteToDoItem(todoId);
+
+
 }
 
 // Function to clear all completed tasks
